@@ -24,7 +24,14 @@ while running:
 
     if choice == "1":
         name = input("Item name: ").strip().lower()
-        print(f"Got item: {name}")
+        print("Categories:")
+        for category in CATEGORIES:
+            print(category)
+        category = input("Category: ").strip().title()
+        if category in CATEGORIES:
+            print(f"Got {name} ({category})")
+        else:
+            print("Not a valid category.")
 
     elif choice == "5":
         running = False
