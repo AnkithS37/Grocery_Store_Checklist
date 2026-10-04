@@ -1,9 +1,11 @@
 [Video Presentation (Paste Link Here)]
 
-# Grocery Store Checlist
+# Grocery Store Checklist
 
 **Author:** Ankith Srivathsan
+
 **Date:** Oct 4th, 2026
+
 **Purpose:** a command line program for building and tracking a grocery shopping list.
 
 ##Features
