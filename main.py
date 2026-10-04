@@ -49,6 +49,8 @@ while running:
         name = input("Item to remove: ").strip().lower()
         if name in grocery_items:
             del grocery_items[name]
+            if name in checked_off:
+                checked_off.remove(name)
             print(f"Removed {name}.")
         else:
             print(f"{name} is not on your list. ")
