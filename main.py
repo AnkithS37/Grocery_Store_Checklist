@@ -5,3 +5,4 @@ Purpose: A command-line grocery list manager that lets the user add, view, remov
 Starter code: None, written using concepts from chapters 1-7
 Date: October 4th, 2026
 """
+CATEGORIES = ("Produce", "Dairy", "Meat", "Pantry", "Frozen", "Other")
