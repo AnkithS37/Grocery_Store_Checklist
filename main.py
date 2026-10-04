@@ -34,10 +34,19 @@ while running:
         else:
             print("Not a valid category.")
 
+    elif choice == "2":
+        if len(grocery_items) == 0:
+            print("Your list is empty.")
+        else:
+            for name, category in grocery_items.items():
+                print(f"{name} ({category})")
+
     elif choice == "5":
         running = False
+
     else:
         print("Feature coming soon!")
+
 
 print("Happy Shopping!")
 
