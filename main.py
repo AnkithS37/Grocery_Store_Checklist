@@ -41,6 +41,14 @@ while running:
             for name, category in grocery_items.items():
                 print(f"{name} ({category})")
 
+    elif choice == "3":
+        name = input("Item to remove: ").strip().lower()
+        if name in grocery_items:
+            del grocery_items[name]
+            print(f"Removed {name}.")
+        else:
+            print(f"{name} is not on your list. ")
+
     elif choice == "5":
         running = False
 
