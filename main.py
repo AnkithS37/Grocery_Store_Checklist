@@ -43,6 +43,7 @@ while running:
                     print(f"[X] {name} ({category})")
                 else:
                     print(f"[ ] {name} ({category})")
+            print(f"Progress: {len(checked_off)} of {len(grocery_items)} checked off.")
 
     elif choice == "3":
         name = input("Item to remove: ").strip().lower()
