@@ -49,6 +49,16 @@ while running:
         else:
             print(f"{name} is not on your list. ")
 
+    elif choice == "4":
+        name = input("Item to check off:").strip().lower()
+        if name not in grocery_items:
+            print(f"{name} is not on your list.")
+        elif name in checked_off:
+            print(f"{name} is already checked off.")
+        else:
+            checked_off.append(name)
+            print(f"Checked off {name}.")
+
     elif choice == "5":
         running = False
 
