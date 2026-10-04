@@ -1,4 +1,4 @@
-[Video Presentation (Paste Link Here)]
+[Video Presentation (YouTube, Unlisted)](https://youtu.be/rPzzwTuPIsA) 
 
 # Grocery Store Checklist
 
@@ -8,8 +8,8 @@
 
 **Purpose:** a command line program for building and tracking a grocery shopping list.
 
-##Features
-- Add items with a quantity and category
-- View the list grouped by category
+## Features
+- Add items with a category
+- View the list with checked-off items marked and a progress count
 - Remove items from the list
 - Check items off while shopping
