@@ -29,7 +29,8 @@ while running:
             print(category)
         category = input("Category: ").strip().title()
         if category in CATEGORIES:
-            print(f"Got {name} ({category})")
+            grocery_items[name] = category
+            print(f"Added {name} ({category})")
         else:
             print("Not a valid category.")
 
