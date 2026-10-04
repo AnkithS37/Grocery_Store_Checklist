@@ -39,7 +39,10 @@ while running:
             print("Your list is empty.")
         else:
             for name, category in grocery_items.items():
-                print(f"{name} ({category})")
+                if name in checked_off:
+                    print(f"[X] {name} ({category})")
+                else:
+                    print(f"[ ] {name} ({category})")
 
     elif choice == "3":
         name = input("Item to remove: ").strip().lower()
