@@ -26,3 +26,9 @@ def test_load_missing_file_gives_empty_list(tmp_path):
     """Loading a file that does not exist should give an empty list."""
     filename = tmp_path / "missing.json"
     assert load_list(filename).total_count() == 0
+
+def test_load_damaged_file_gives_empty_list(tmp_path):
+    """Loading a file with broken JSON should give an empty list."""
+    filename = tmp_path / "bad.json"
+    filename.write_text("oops")
+    assert load_list(filename).total_count() == 0
