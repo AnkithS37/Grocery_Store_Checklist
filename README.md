@@ -1,4 +1,4 @@
-**Video Presentation:** (YouTube link goes here after upload)
+**Video Presentation:** (https://youtu.be/kx4LgC9EQ1w)
 
 # Grocery Store Checklist
 
