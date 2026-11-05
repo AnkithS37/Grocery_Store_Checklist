@@ -34,6 +34,18 @@ def add_item_menu(grocery_list):
         print(error)
 
 
+
+def view_list_menu(grocery_list):
+    """Print every item with a checkbox and show the progress count."""
+    if grocery_list.total_count() == 0:
+        print("Your list is empty.")
+        return
+    for item in grocery_list.items.values():
+        box = "[X]" if item.checked else "[ ]"
+        print(f"{box} {item.name} ({item.category})")
+    print(f"Progress: {grocery_list.checked_count()} of {grocery_list.total_count()} checked off.")
+
+
 def main():
     """Load the saved list, run the menu loop, and save when the user quits."""
     grocery_list = load_list()
@@ -43,6 +55,8 @@ def main():
         choice = input("Choose an option (1-5): ").strip()
         if choice == "1":
             add_item_menu(grocery_list)
+        elif choice == "2":
+            view_list_menu(grocery_list)
         elif choice == "5":
             running = False
         else:
