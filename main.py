@@ -55,6 +55,16 @@ def view_list_menu(grocery_list):
     print(f"Progress: {grocery_list.checked_count()} of {grocery_list.total_count()} checked off.")
 
 
+def check_off_item_menu(grocery_list):
+    """Ask the user which item to check off and mark it done."""
+    name = input("Item to check off: ").strip().lower()
+    try:
+        grocery_list.check_off_item(name)
+        print(f"Checked off {name}.")
+    except ValueError as error:
+        print(error)
+
+
 def main():
     """Load the saved list, run the menu loop, and save when the user quits."""
     grocery_list = load_list()
@@ -68,6 +78,8 @@ def main():
             view_list_menu(grocery_list)
         elif choice == "3":
             remove_item_menu(grocery_list)
+        elif choice == "4":
+            check_off_item_menu(grocery_list)
         elif choice == "5":
             running = False
         else:
