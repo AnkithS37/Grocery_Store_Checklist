@@ -21,3 +21,8 @@ def test_save_then_load_keeps_items(tmp_path):
     loaded_list = load_list(filename)
     assert loaded_list.total_count() == 1
     assert loaded_list.checked_count() == 1
+
+def test_load_missing_file_gives_empty_list(tmp_path):
+    """Loading a file that does not exist should give an empty list."""
+    filename = tmp_path / "missing.json"
+    assert load_list(filename).total_count() == 0
