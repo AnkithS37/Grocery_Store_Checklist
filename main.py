@@ -34,6 +34,15 @@ def add_item_menu(grocery_list):
         print(error)
 
 
+def remove_item_menu(grocery_list):
+    """Ask the user which item to remove and take it off the list."""
+    name = input("Item to remove: ").strip().lower()
+    try:
+        grocery_list.remove_item(name)
+        print(f"Removed {name}.")
+    except ValueError as error:
+        print(error)
+
 
 def view_list_menu(grocery_list):
     """Print every item with a checkbox and show the progress count."""
@@ -57,6 +66,8 @@ def main():
             add_item_menu(grocery_list)
         elif choice == "2":
             view_list_menu(grocery_list)
+        elif choice == "3":
+            remove_item_menu(grocery_list)
         elif choice == "5":
             running = False
         else:
