@@ -8,6 +8,8 @@ Date: November 4th, 2026
 
 from storage import load_list, save_list
 
+from grocery_item import CATEGORIES
+
 
 def show_menu():
     """Print the menu options."""
@@ -18,6 +20,19 @@ def show_menu():
     print("4. Check Off Item")
     print("5. Quit")
 
+def add_item_menu(grocery_list):
+    """Ask the user for an item name and category, then add it to the list."""
+    name = input("Item name: ").strip().lower()
+    print("Categories:")
+    for category in CATEGORIES:
+        print(category)
+    category = input("Category: ").strip().title()
+    try:
+        grocery_list.add_item(name, category)
+        print(f"Added {name} ({category})")
+    except ValueError as error:
+        print(error)
+
 
 def main():
     """Load the saved list, run the menu loop, and save when the user quits."""
@@ -26,7 +41,9 @@ def main():
     while running:
         show_menu()
         choice = input("Choose an option (1-5): ").strip()
-        if choice == "5":
+        if choice == "1":
+            add_item_menu(grocery_list)
+        elif choice == "5":
             running = False
         else:
             print("Feature coming soon!")
